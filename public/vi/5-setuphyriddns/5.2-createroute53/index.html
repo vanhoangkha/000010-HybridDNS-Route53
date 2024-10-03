@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.99.1" />
+    <meta name="generator" content="Hugo 0.133.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Tạo Route 53 Resolver Rules :: THIẾT LẬP HYBRID DNS VỚI ROUTE 53 RESOLVER</title>
 
     
-    <link href="/css/nucleus.css?1704870505" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1704870505" rel="stylesheet">
-    <link href="/css/hybrid.css?1704870505" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1704870505" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1704870505" rel="stylesheet">
-    <link href="/css/auto-complete.css?1704870505" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1704870505" rel="stylesheet">
-    <link href="/css/theme.css?1704870505" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1704870505" rel="stylesheet">
+    <link href="/css/nucleus.css?1727941435" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1727941435" rel="stylesheet">
+    <link href="/css/hybrid.css?1727941435" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1727941435" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1727941435" rel="stylesheet">
+    <link href="/css/auto-complete.css?1727941435" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1727941435" rel="stylesheet">
+    <link href="/css/theme.css?1727941435" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1727941435" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1704870505" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1727941435" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1704870505"></script>
+    <script src="/js/jquery-3.3.1.min.js?1727941435"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1704870505"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1704870505"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1727941435"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1727941435"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/vi";
+        var baseurl = "\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1704870505"></script>
+<script type="text/javascript" src="/js/search.js?1727941435"></script>
 
     
   </div>
@@ -342,7 +342,7 @@
   
     
     <li data-nav-id="/vi/5-setuphyriddns/5.2-createroute53/" title="Tạo Route 53 Resolver Rules" class="dd-item 
-        parent
+        
         active
         
         ">
@@ -541,7 +541,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>10-01-2024</font></i>
+        <i><font color=orange>03-10-2024</font></i>
     </left>
     <left>
         <br>
@@ -649,19 +649,19 @@
 </ul>
 </li>
 </ol>
-<p><img src="/images/5.2-CreateRoute53rule/0001.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
+<p><img alt="RDGW" src="/images/5.2-CreateRoute53rule/0001.png?featherlight=false&width=90pc"></p>
 <ol start="2">
 <li>Nhập các thông tin sau:
 <ul>
-<li><strong>Name</strong>: FowardToOnPremAD</li>
+<li><strong>Name</strong>: <code>FowardToOnPremAD</code></li>
 <li><strong>Rule type</strong>: Forward</li>
-<li><strong>Domain name</strong>: onprem.example.com. (Đây là tên miền của directory mà bạn đã tạo ở phần trước)</li>
+<li><strong>Domain name</strong>: <code>onprem.example.com.</code> (Đây là tên miền của directory mà bạn đã tạo ở phần trước)</li>
 <li><strong>VPC that use this rule</strong>: HybridDNS-VPCStack</li>
 <li><strong>Outbound Endpoint</strong>: R53-OutboundEndpoint</li>
 </ul>
 </li>
 </ol>
-<p><img src="/images/5.2-CreateRoute53rule/0002.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
+<p><img alt="RDGW" src="/images/5.2-CreateRoute53rule/0002.png?featherlight=false&width=90pc"></p>
 <ol start="3">
 <li>
 <p>Ở Target IP addresses, nhập hai địa chỉ IP của <strong>AWS Managed Microsoft Active Directory</strong> đã được ghi nhận lại. Lưu ý, bạn cần phải chọn Add target để thêm địa chỉ IP thứ hai.</p>
@@ -670,15 +670,15 @@
 </ul>
 </li>
 </ol>
-<p><img src="/images/5.2-CreateRoute53rule/0003.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
+<p><img alt="RDGW" src="/images/5.2-CreateRoute53rule/0003.png?featherlight=false&width=90pc"></p>
 <ol start="4">
 <li>Hoàn thành tạo Route 53 Resolver</li>
 </ol>
-<p><img src="/images/5.2-CreateRoute53rule/0004.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
+<p><img alt="RDGW" src="/images/5.2-CreateRoute53rule/0004.png?featherlight=false&width=90pc"></p>
 <ol start="5">
 <li>Tới đây, bạn đã cấu hình <strong>Route 53 Resolver</strong> để chuyển tiếp các truy vấn cho onprem.example.com tới một <strong>DNS</strong> resolver khác (ví dụ: AWS Managed Microsoft AD). Tên miền, onprem.example.com, mô phỏng tên miền <strong>DNS</strong> được host bởi hệ thống <strong>DNS</strong> on-premise của bạn.</li>
 </ol>
-<p><img src="/images/5.2-CreateRoute53rule/0005.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
+<p><img alt="RDGW" src="/images/5.2-CreateRoute53rule/0005.png?featherlight=false&width=90pc"></p>
 
 
 
@@ -959,19 +959,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1704870505"></script>
-    <script src="/js/perfect-scrollbar.min.js?1704870505"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1704870505"></script>
-    <script src="/js/jquery.sticky.js?1704870505"></script>
-    <script src="/js/featherlight.min.js?1704870505"></script>
-    <script src="/js/highlight.pack.js?1704870505"></script>
+    <script src="/js/clipboard.min.js?1727941435"></script>
+    <script src="/js/perfect-scrollbar.min.js?1727941435"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1727941435"></script>
+    <script src="/js/jquery.sticky.js?1727941435"></script>
+    <script src="/js/featherlight.min.js?1727941435"></script>
+    <script src="/js/highlight.pack.js?1727941435"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1704870505"></script>
-    <script src="/js/learn.js?1704870505"></script>
-    <script src="/js/hugo-learn.js?1704870505"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1727941435"></script>
+    <script src="/js/learn.js?1727941435"></script>
+    <script src="/js/hugo-learn.js?1727941435"></script>
 
-    <link href="/mermaid/mermaid.css?1704870505" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1704870505"></script>
+    <link href="/mermaid/mermaid.css?1727941435" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1727941435"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
