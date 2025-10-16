@@ -1,6 +1,6 @@
 ---
 title : "Preparation "
-date : "`r Sys.Date()`"
+date : "2024-12-10"
 weight : 2
 chapter : false
 pre : " <b> 2. </b> "

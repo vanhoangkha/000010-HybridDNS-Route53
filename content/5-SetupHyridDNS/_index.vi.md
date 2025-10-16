@@ -1,6 +1,6 @@
 ---
 title : "Thiết lập DNS"
-date :  "`r Sys.Date()`" 
+date : "2024-12-10" 
 weight : 5
 chapter : false
 pre : " <b> 5. </b> "

@@ -1,6 +1,6 @@
 ---
-title : "Microsoft AD Deployment"
-date : "`r Sys.Date()`"
+title : "Deploy Microsoft AD"
+date : "2024-12-10"
 weight : 4
 chapter : false
 pre : " <b> 4. </b> "
@@ -8,60 +8,61 @@ pre : " <b> 4. </b> "
 
 #### Deploy Microsoft AD
 
-To set up **DNS emulation** on-premises, we will utilize the **AWS Directory Service** to deploy **AWS Managed Microsoft Active Directory** in two private subnets created by CloudFormation, as illustrated below:
+To simulate on-premise **DNS**, we will use the **AWS Directory Service** to deploy **AWS Managed Microsoft Active Directory** in the two private subnets created by CloudFormation as shown below:
 
 ![RDGW](/images/2-Pre/0004.png?width=45pc)
 
-1. Log in to the **AWS Console** and navigate to the Directory Service console by using the search box and selecting Directory Services.
-   
-   Ensure that you have chosen the appropriate Region. Check the top left corner of the **AWS Console** and select the desired Region (For instance, we're selecting ap-southeast-1).
-   
-   ![RDGW](/images/4-AD/0001.png?width=90pc)
+1. Log in to **AWS Console** and access Directory Service console through the search box and search for Directory Services.
 
-2. If this is your first time accessing Directory Services in your region, you will be directed to the initial welcome screen. Expand the left sidebar and click on Directories.
-   
-   - Choose **Set up directory**.
-   
-   ![RDGW](/images/4-AD/0002.png?featherlight=false&width=90pc)
+   - Make sure you have selected the correct **Region**. Pay attention to the upper left corner of the **AWS Console** and select the correct Region you need (Here we are selecting us-east-2)
 
-3. Select **Directory types** and then choose **AWS Managed Microsoft AD**.
-   
-   ![RDGW](/images/4-AD/0003.png?featherlight=false&width=90pc)
+   ![RDGW](/images/4-AD/1.png?width=90pc)
 
-4. On the "Enter Directory Information" page, provide the following details:
-   
-   - For **Edition**, select **Standard Edition**.
-   
-   - For **Directory DNS name**, use `onprem.example.com` (ensure this **DNS** name is unique among your directories).
-   
-   - For **Directory NetBIOS name**, use `onprem` (ensure this **NetBIOS** name is unique among your directories).
-   
-   ![RDGW](/images/4-AD/0004.png?featherlight=false&width=90pc)
+2. If this is your first time accessing **Directory Services** in this region, you will be taken to the initial welcome screen. Expand the left sidebar and select **Directories**.
 
-5. Proceed with the configuration:
-   
-   - For **Directory Description**, use `this to simulate the on-prem AD`.
-   
-   - Set an **Admin Password** that you can remember. Note the password complexity requirements provided on the screen.
-   
-   - Confirm the password by entering it again.
-   
-   - Click on **Next**.
-   
-   ![RDGW](/images/4-AD/0005.png?featherlight=false&width=90pc)
+   - Select **Set up directory**.
 
-6. In the "Choose VPC and subnets" section, select the VPC named **HybridDNS-VPCStack** that we previously created, along with two private subnets: **Private subnet 1A** and **Private subnet 2A**. Then, proceed to the next step.
-   
-   ![RDGW](/images/4-AD/0006.png?featherlight=false&width=90pc)
+   ![RDGW](/images/4-AD/2.png?featherlight=false&width=90pc)
 
-7. On the "Review & create" screen, carefully review the settings, and then click on **Create Directory**.
-   
-   ![RDGW](/images/4-AD/0007.png?featherlight=false&width=90pc)
+3. Select **Directory types**, choose **AWS Managed Microsoft AD**.
 
-8. The creation of the directory will take approximately 20 minutes. During this time, AWS will provision two **Windows** servers and promote them to **Active Directory** domain controllers for the specified AD forest. This forest will be a new AD forest. The process will be marked as complete when the status changes to Active.
-   
-   ![RDGW](/images/4-AD/0008.png?featherlight=false&width=90pc)
+   ![RDGW](/images/4-AD/3.png?featherlight=false&width=90pc)
 
-9. Once the directory has been successfully created, you can view its details by clicking on the Directory ID. The two **DNS** IP addresses listed represent the IP addresses of **elastic network interfaces** (ENI) associated with your availability zone for communication with **AWS Managed Microsoft AD Domain Controllers**.
-   
-   ![RDGW](/images/4-AD/0009.png?featherlight=false&width=90pc)
+4. On the **Enter Directory Information** page, enter the following information:
+
+   - In **Edition**: select **Standard Edition**.
+
+   - In **Directory DNS name**: `onprem.example.com` (this **DNS** name must be unique among your directories).
+
+   - In **Directory NetBIOS name**: `onprem` (this **NetBIOS** name must be unique among your directories).
+
+   ![RDGW](/images/4-AD/4.png?featherlight=false&width=90pc)
+
+5. Continue configuration:
+
+   - In **Directory Description**: `This is to simulate the on-prem AD`.
+
+   - In **Admin Password**: Use a password you can remember. Please note the password complexity requirements listed on the screen.
+
+   - In **Confirm password**: Enter the password again.
+
+   - Select **Next**.
+
+   ![RDGW](/images/4-AD/5.png?featherlight=false&width=90pc)
+
+6. In **Choose VPC and subnets**, select **VPC Hybrid-DNS-VPCStack** that we created earlier and the two private subnets **Private subnet 1A** and **Private subnet 2A**. Then, select **Next**.
+
+   ![RDGW](/images/4-AD/6.png?featherlight=false&width=90pc)
+
+7. On the **Review & create** screen, review the settings and select **Create Directory**.
+
+   ![RDGW](/images/4-AD/7.png?featherlight=false&width=90pc)
+
+8. The directory will take about 20 minutes to create. During this time, AWS will provision two **Windows** servers and promote them to **Active Directory** domain controllers for the AD forest you specified. This AD forest will be a new AD forest. The process will complete when you see the status change to Active.
+
+   ![RDGW](/images/4-AD/8.png?featherlight=false&width=90pc)
+   ![RDGW](/images/4-AD/9.png?featherlight=false&width=90pc)
+
+9. When the directory has been created, you can view details by clicking on the **Directory ID**. The two **DNS** IP addresses listed are the IP addresses of **elastic network interfaces** (ENI) that have been placed in your availability zone to communicate with **AWS Managed Microsoft AD Domain Controllers**.
+
+   ![RDGW](/images/4-AD/10.png?featherlight=false&width=90pc)

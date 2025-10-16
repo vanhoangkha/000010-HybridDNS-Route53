@@ -1,44 +1,44 @@
 ---
-title : "Generate Key Pair"
-date : "`r Sys.Date()`"
+title : "Create Key Pair"
+date : "2024-12-10"
 weight : 1
 chapter : false
 pre : " <b> 2.1 </b> "
 ---
 
-#### Generate Key Pair
+#### Create Key Pair
 
-To ensure secure access to **EC2 instances**, AWS uses a private/public key in the form of a key pair. With **Windows** instances, the key pair is used to obtain the administrator password via the **Amazon EC2 console**. In this section, you will create a key pair.
+To ensure secure access to **EC2 instances**, AWS uses private/public key pairs. For **Windows** instances, the key pair is used to retrieve the administrator password through the **Amazon EC2 console**. In this section, you will create a key pair.
 
-![Create Key Pair](/images/2-Pre/0001.png?width=45pc)
+![Create Key Pair](/images/2-Pre/0003.png?featherlight=false&width=45pc)
 
-1. Go to **AWS Management Console**
+1. Access the **AWS Management Console**
 
-   - Find EC2
+   - Search for EC2
    - Select **EC2**
 
-   ![Create Key Pair](/images/2.1-CreateKeypair/0001.png?width=90pc)
+   ![Create Key Pair](/images/2.1-CreateKeypair/1.png?width=90pc)
 
-2. In **EC2** interface
+2. In the **EC2** interface
 
    - Select **Key Pairs**
    - Select **Create key pair**
 
-   ![Create Key Pair](/images/2.1-CreateKeypair/0002.png?width=90pc)
+   ![Create Key Pair](/images/2.1-CreateKeypair/2.png?width=90pc)
 
 3. In the **Create key pair** interface
 
-   - Enter **hyrid-DNS** for **Name**
+   - Enter **``` hyrid-DNS ```** for **Name**
    - **Key pair type**, select **RSA**
    - **Private key file format**, select **.pem**
    - Select **Create key pair**
 
-   ![Create Key Pair](/images/2.1-CreateKeypair/0003.png?width=90pc)
+   ![Create Key Pair](/images/2.1-CreateKeypair/3.png?width=90pc)
 
-4. Generate key pair successfully.
+4. Key pair created successfully.
 
-   ![Create Key Pair](/images/2.1-CreateKeypair/0004.png?width=90pc)
+   ![Create Key Pair](/images/2.1-CreateKeypair/4.png?width=90pc)
 
-5. **Important:** AWS will automatically download the private key pair file with the filename **hybrid-DNS.pem**. Make sure you have saved the PEM file and remember the save location because you cannot reload this key file. You will have to use it to decrypt the password and connect to the **EC2 instance** deployed in the next step.
-6. 
+5. Important: AWS will automatically download the private key file with the filename **hybrid-DNS.pem**. Make sure you save the PEM file and remember its location because you cannot download this key file again. You will need to use it to decrypt the password and connect to the **EC2 instance** deployed in the next step.
+
    ![alt text](/images/2.1-CreateKeypair/0005.png?width=40pc)

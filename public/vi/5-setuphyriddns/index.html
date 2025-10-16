@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="vi" class="js csstransforms3d">
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.133.0">
+    <meta name="generator" content="Hugo 0.148.1">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Thiết lập DNS :: THIẾT LẬP HYBRID DNS VỚI ROUTE 53 RESOLVER</title>
 
     
-    <link href="/css/nucleus.css?1733747256" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1733747256" rel="stylesheet">
-    <link href="/css/hybrid.css?1733747256" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1733747256" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1733747256" rel="stylesheet">
-    <link href="/css/auto-complete.css?1733747256" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1733747256" rel="stylesheet">
-    <link href="/css/theme.css?1733747256" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1733747256" rel="stylesheet">
+    <link href="/css/nucleus.css?1760626417" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1760626417" rel="stylesheet">
+    <link href="/css/hybrid.css?1760626417" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1760626417" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1760626417" rel="stylesheet">
+    <link href="/css/auto-complete.css?1760626417" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1760626417" rel="stylesheet">
+    <link href="/css/theme.css?1760626417" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1760626417" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1733747256" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1760626417" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1733747256"></script>
+    <script src="/js/jquery-3.3.1.min.js?1760626417"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1733747256"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1733747256"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1760626417"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1760626417"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/\/vi";
+        var baseurl = "\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1733747256"></script>
+<script type="text/javascript" src="/js/search.js?1760626417"></script>
 
     
   </div>
@@ -489,7 +489,7 @@
                   
                     
                     
-                      <option id="en" value="/5-setuphyriddns/">English</option>
+                      <option id="en" value="//localhost:1313/5-setuphyriddns/">English</option>
                     
                   
               
@@ -503,7 +503,7 @@
                   
                     
                     
-                      <option id="vi" value="/vi/5-setuphyriddns/" selected>Tiếng Việt</option>
+                      <option id="vi" value="//localhost:1313/vi/5-setuphyriddns/" selected>Tiếng Việt</option>
                     
                   
               
@@ -633,7 +633,7 @@
 	<h4 id="thiết-lập-dns">Thiết lập DNS</h4>
 <p>Trong phòng phần thực hành này, bạn sẽ sử dụng ba công cụ (<em>Outbound Endpoint</em>, Resolver Rules, và Inbound Endpoints) của <strong>Route 53 Resolver</strong> để thiết lập hybrid <strong>DNS</strong> cho hạ tầng AWS và On-premise.</p>
 <p>Dịch vụ <strong>AWS Managed Microsoft Active Directory</strong> mà bạn đã tạo ở phần trước sẽ được sử dụng để mô phỏng hệ thống <strong>DNS</strong> on-premise của bạn. Hình dưới đây sẽ thể hiện kiến trúc mà bạn sẽ xây dựng tiếp tục dựa trên những hạ tầng mà bạn đã triển khai ở phần trước:</p>
-<p><img alt="Route 53" src="/images/2-Pre/0005.png?width=60pc"></p>
+<p><img src="/images/2-Pre/0005.png?width=60pc" alt="Route 53"></p>
 <h4 id="giải-thích">Giải thích:</h4>
 <ul>
 <li><strong>Mũi tên màu đỏ</strong> – Bạn sẽ cấu hình <em>Outbound Endpoint</em> để tạo cầu nối cho <strong>Route 53 Resolver</strong> có thể chuyển tiếp (<em>forward</em>) các truy vấn <strong>DNS</strong> tới AWS Managed <strong>Active Directory</strong>.</li>
@@ -651,8 +651,7 @@
 </ol>
 <blockquote>
 <p><strong>Lưu ý:</strong> Sau khi thực hiện, bạn sẽ hiểu được cách thiết lập hybrid <strong>DNS</strong> giữa các <strong>DNS</strong> hosted zone ở hệ thống on-premise và ở AWS. Trong bài thực hành, chúng ta đã sử dụng máy chủ AWS Managed Microsoft AD <strong>DNS</strong> để mô phỏng hệ thống <strong>DNS</strong> on-premise. Để hình dung về sự tích hợp với môi trường on-premise thực tế của mình, bạn cần chỉ định địa chỉ IP cho các máy chủ <strong>DNS</strong> on-premise của mình thay vì địa chỉ IP của AWS Managed Microsoft AD <strong>DNS</strong>.
-Để cho phép các máy chủ <strong>DNS</strong> on-premise của bạn phân giải bất kỳ AWS Private Zones nào host trên Route 53, bạn sẽ tạo các <strong>DNS</strong> forwarding rule trong hệ thống <strong>DNS</strong> on-premise của mình. Đối với các tên miền <strong>DNS</strong> được host trên Route 53, hãy forward đến địa chỉ IP của Inbound Endpoint.</p>
-</blockquote>
+Để cho phép các máy chủ <strong>DNS</strong> on-premise của bạn phân giải bất kỳ AWS Private Zones nào host trên Route 53, bạn sẽ tạo các <strong>DNS</strong> forwarding rule trong hệ thống <strong>DNS</strong> on-premise của mình. Đối với các tên miền <strong>DNS</strong> được host trên Route 53, hãy forward đến địa chỉ IP của Inbound Endpoint.</p></blockquote>
 
 
 
@@ -929,19 +928,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1733747256"></script>
-    <script src="/js/perfect-scrollbar.min.js?1733747256"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1733747256"></script>
-    <script src="/js/jquery.sticky.js?1733747256"></script>
-    <script src="/js/featherlight.min.js?1733747256"></script>
-    <script src="/js/highlight.pack.js?1733747256"></script>
+    <script src="/js/clipboard.min.js?1760626417"></script>
+    <script src="/js/perfect-scrollbar.min.js?1760626417"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1760626417"></script>
+    <script src="/js/jquery.sticky.js?1760626417"></script>
+    <script src="/js/featherlight.min.js?1760626417"></script>
+    <script src="/js/highlight.pack.js?1760626417"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1733747256"></script>
-    <script src="/js/learn.js?1733747256"></script>
-    <script src="/js/hugo-learn.js?1733747256"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1760626417"></script>
+    <script src="/js/learn.js?1760626417"></script>
+    <script src="/js/hugo-learn.js?1760626417"></script>
 
-    <link href="/mermaid/mermaid.css?1733747256" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1733747256"></script>
+    <link href="/mermaid/mermaid.css?1760626417" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1760626417"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

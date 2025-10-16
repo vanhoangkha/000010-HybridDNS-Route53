@@ -2,10 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Kết nối đến RDGW on THIẾT LẬP HYBRID DNS VỚI ROUTE 53 RESOLVER</title>
-    <link>/vi/3-connecttordgw/</link>
+    <link>//localhost:1313/vi/3-connecttordgw/</link>
     <description>Recent content in Kết nối đến RDGW on THIẾT LẬP HYBRID DNS VỚI ROUTE 53 RESOLVER</description>
     <generator>Hugo</generator>
     <language>vi</language>
-    <atom:link href="/vi/3-connecttordgw/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="//localhost:1313/vi/3-connecttordgw/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Microsoft AD Deployment on SET UP HYBRID DNS WITH ROUTE 53 RESOLVER</title>
-    <link>/4-setupad/</link>
-    <description>Recent content in Microsoft AD Deployment on SET UP HYBRID DNS WITH ROUTE 53 RESOLVER</description>
+    <title>Deploy Microsoft AD on SET UP HYBRID DNS WITH ROUTE 53 RESOLVER</title>
+    <link>//localhost:1313/4-setupad/</link>
+    <description>Recent content in Deploy Microsoft AD on SET UP HYBRID DNS WITH ROUTE 53 RESOLVER</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="/4-setupad/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="//localhost:1313/4-setupad/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

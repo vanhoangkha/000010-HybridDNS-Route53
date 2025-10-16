@@ -2,196 +2,210 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/vi/1-introduce/</loc>
+    <loc>//localhost:1313/vi/1-introduce/</loc>
+    <lastmod>2024-12-10T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/1-introduce/"
+                href="//localhost:1313/1-introduce/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/1-introduce/"
+                href="//localhost:1313/vi/1-introduce/"
                 />
   </url><url>
-    <loc>/vi/2-prerequiste/2.1-createkeypair/</loc>
+    <loc>//localhost:1313/vi/2-prerequiste/2.1-createkeypair/</loc>
+    <lastmod>2024-12-10T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-prerequiste/2.1-createkeypair/"
+                href="//localhost:1313/2-prerequiste/2.1-createkeypair/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-prerequiste/2.1-createkeypair/"
+                href="//localhost:1313/vi/2-prerequiste/2.1-createkeypair/"
                 />
   </url><url>
-    <loc>/vi/5-setuphyriddns/5.1-createoe/</loc>
+    <loc>//localhost:1313/vi/5-setuphyriddns/5.1-createoe/</loc>
+    <lastmod>2024-12-10T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/5-setuphyriddns/5.1-createoe/"
+                href="//localhost:1313/5-setuphyriddns/5.1-createoe/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/5-setuphyriddns/5.1-createoe/"
+                href="//localhost:1313/vi/5-setuphyriddns/5.1-createoe/"
                 />
   </url><url>
-    <loc>/vi/</loc>
+    <loc>//localhost:1313/vi/</loc>
+    <lastmod>2024-12-10T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/"
+                href="//localhost:1313/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/"
+                href="//localhost:1313/vi/"
                 />
   </url><url>
-    <loc>/vi/2-prerequiste/</loc>
+    <loc>//localhost:1313/vi/2-prerequiste/</loc>
+    <lastmod>2024-12-10T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-prerequiste/"
+                href="//localhost:1313/2-prerequiste/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-prerequiste/"
+                href="//localhost:1313/vi/2-prerequiste/"
                 />
   </url><url>
-    <loc>/vi/2-prerequiste/2.2-launchcloudformation/</loc>
+    <loc>//localhost:1313/vi/2-prerequiste/2.2-launchcloudformation/</loc>
+    <lastmod>2024-12-10T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-prerequiste/2.2-launchcloudformation/"
+                href="//localhost:1313/2-prerequiste/2.2-launchcloudformation/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-prerequiste/2.2-launchcloudformation/"
+                href="//localhost:1313/vi/2-prerequiste/2.2-launchcloudformation/"
                 />
   </url><url>
-    <loc>/vi/5-setuphyriddns/5.2-createroute53/</loc>
+    <loc>//localhost:1313/vi/5-setuphyriddns/5.2-createroute53/</loc>
+    <lastmod>2024-12-10T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/5-setuphyriddns/5.2-createroute53/"
+                href="//localhost:1313/5-setuphyriddns/5.2-createroute53/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/5-setuphyriddns/5.2-createroute53/"
+                href="//localhost:1313/vi/5-setuphyriddns/5.2-createroute53/"
                 />
   </url><url>
-    <loc>/vi/2-prerequiste/2.3-security/</loc>
+    <loc>//localhost:1313/vi/2-prerequiste/2.3-security/</loc>
+    <lastmod>2024-12-10T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-prerequiste/2.3-security/"
+                href="//localhost:1313/2-prerequiste/2.3-security/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-prerequiste/2.3-security/"
+                href="//localhost:1313/vi/2-prerequiste/2.3-security/"
                 />
   </url><url>
-    <loc>/vi/3-connecttordgw/</loc>
+    <loc>//localhost:1313/vi/3-connecttordgw/</loc>
+    <lastmod>2024-12-10T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/3-connecttordgw/"
+                href="//localhost:1313/3-connecttordgw/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/3-connecttordgw/"
+                href="//localhost:1313/vi/3-connecttordgw/"
                 />
   </url><url>
-    <loc>/vi/5-setuphyriddns/5.3-createie/</loc>
+    <loc>//localhost:1313/vi/5-setuphyriddns/5.3-createie/</loc>
+    <lastmod>2024-12-10T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/5-setuphyriddns/5.3-createie/"
+                href="//localhost:1313/5-setuphyriddns/5.3-createie/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/5-setuphyriddns/5.3-createie/"
+                href="//localhost:1313/vi/5-setuphyriddns/5.3-createie/"
                 />
   </url><url>
-    <loc>/vi/5-setuphyriddns/5.4-results/</loc>
+    <loc>//localhost:1313/vi/5-setuphyriddns/5.4-results/</loc>
+    <lastmod>2024-12-10T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/5-setuphyriddns/5.4-results/"
+                href="//localhost:1313/5-setuphyriddns/5.4-results/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/5-setuphyriddns/5.4-results/"
+                href="//localhost:1313/vi/5-setuphyriddns/5.4-results/"
                 />
   </url><url>
-    <loc>/vi/4-setupad/</loc>
+    <loc>//localhost:1313/vi/4-setupad/</loc>
+    <lastmod>2024-12-10T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/4-setupad/"
+                href="//localhost:1313/4-setupad/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/4-setupad/"
+                href="//localhost:1313/vi/4-setupad/"
                 />
   </url><url>
-    <loc>/vi/5-setuphyriddns/</loc>
+    <loc>//localhost:1313/vi/5-setuphyriddns/</loc>
+    <lastmod>2024-12-10T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/5-setuphyriddns/"
+                href="//localhost:1313/5-setuphyriddns/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/5-setuphyriddns/"
+                href="//localhost:1313/vi/5-setuphyriddns/"
                 />
   </url><url>
-    <loc>/vi/6-cleanup/</loc>
+    <loc>//localhost:1313/vi/6-cleanup/</loc>
+    <lastmod>2024-12-10T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/6-cleanup/"
+                href="//localhost:1313/6-cleanup/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/6-cleanup/"
+                href="//localhost:1313/vi/6-cleanup/"
                 />
   </url><url>
-    <loc>/vi/categories/</loc>
+    <loc>//localhost:1313/vi/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/categories/"
+                href="//localhost:1313/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/categories/"
+                href="//localhost:1313/vi/categories/"
                 />
   </url><url>
-    <loc>/vi/tags/</loc>
+    <loc>//localhost:1313/vi/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/tags/"
+                href="//localhost:1313/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/tags/"
+                href="//localhost:1313/vi/tags/"
                 />
   </url>
 </urlset>

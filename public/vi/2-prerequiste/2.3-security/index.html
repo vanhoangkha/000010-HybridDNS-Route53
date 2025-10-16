@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="vi" class="js csstransforms3d">
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.133.0">
+    <meta name="generator" content="Hugo 0.148.1">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Cấu hình Security Group :: THIẾT LẬP HYBRID DNS VỚI ROUTE 53 RESOLVER</title>
 
     
-    <link href="/css/nucleus.css?1733747256" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1733747256" rel="stylesheet">
-    <link href="/css/hybrid.css?1733747256" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1733747256" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1733747256" rel="stylesheet">
-    <link href="/css/auto-complete.css?1733747256" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1733747256" rel="stylesheet">
-    <link href="/css/theme.css?1733747256" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1733747256" rel="stylesheet">
+    <link href="/css/nucleus.css?1760626417" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1760626417" rel="stylesheet">
+    <link href="/css/hybrid.css?1760626417" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1760626417" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1760626417" rel="stylesheet">
+    <link href="/css/auto-complete.css?1760626417" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1760626417" rel="stylesheet">
+    <link href="/css/theme.css?1760626417" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1760626417" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1733747256" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1760626417" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1733747256"></script>
+    <script src="/js/jquery-3.3.1.min.js?1760626417"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1733747256"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1733747256"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1760626417"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1760626417"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/\/vi";
+        var baseurl = "\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1733747256"></script>
+<script type="text/javascript" src="/js/search.js?1760626417"></script>
 
     
   </div>
@@ -489,7 +489,7 @@
                   
                     
                     
-                      <option id="en" value="/2-prerequiste/2.3-security/">English</option>
+                      <option id="en" value="//localhost:1313/2-prerequiste/2.3-security/">English</option>
                     
                   
               
@@ -503,7 +503,7 @@
                   
                     
                     
-                      <option id="vi" value="/vi/2-prerequiste/2.3-security/" selected>Tiếng Việt</option>
+                      <option id="vi" value="//localhost:1313/vi/2-prerequiste/2.3-security/" selected>Tiếng Việt</option>
                     
                   
               
@@ -641,11 +641,11 @@
 <li>
 <p>Đăng nhập vào <strong>AWS Console</strong> và truy cập vào <strong>EC2 Management console</strong> thông qua khung tìm kiếm và tìm “EC2”.</p>
 <ul>
-<li>Hãy chắc chắn bạn đã chọn đúng Region. Chú ý ở góc trái của <strong>AWS Console</strong> và lựa chọn đúng Region mà bạn cần (Ở đây chúng ta đang lựa chọn ap-southeast-1)</li>
+<li>Hãy chắc chắn bạn đã chọn đúng Region. Chú ý ở góc trái của <strong>AWS Console</strong> và lựa chọn đúng Region mà bạn cần (Ở đây chúng ta đang lựa chọn us-east-2)</li>
 </ul>
 </li>
 </ol>
-<p><img alt="Security Group" src="/images/2.3-SecurityGroup/0001.png?width=90pc"></p>
+<p><img src="/images/2.3-SecurityGroup/1.png?width=90pc" alt="Security Group"></p>
 <ol start="2">
 <li>
 <p>Trong giao diện <strong>EC2</strong></p>
@@ -657,7 +657,7 @@
 </ul>
 </li>
 </ol>
-<p><img alt="Security Group" src="/images/2.3-SecurityGroup/0002.png?width=90pc"></p>
+<p><img src="/images/2.3-SecurityGroup/2.png?width=90pc" alt="Security Group"></p>
 <ol start="3">
 <li>
 <p>Tiến hành cấu hình chỉnh sửa <strong>Inbound</strong></p>
@@ -670,11 +670,11 @@
 </ul>
 </li>
 </ol>
-<p><img alt="Security Group" src="/images/2.3-SecurityGroup/0003.png?width=90pc"></p>
+<p><img src="/images/2.3-SecurityGroup/3.png?width=90pc" alt="Security Group"></p>
 <ol start="4">
 <li>Hoàn thành cấu hình security group.</li>
 </ol>
-<p><img alt="Security Group" src="/images/2.3-SecurityGroup/0004.png?width=90pc"></p>
+<p><img src="/images/2.3-SecurityGroup/4.png?width=90pc" alt="Security Group"></p>
 
 <div class="notices tip" ><p>Khi bảo mật ứng dụng của mình, bạn cần đảm bảo <strong>chỉ mở các cổng mà ứng dụng của bạn cần</strong>. Trong bước này, <strong>bạn đã xóa cổng <em>3391</em> và <em>443</em></strong>, vì bạn sẽ không sử dụng các cổng đó trong bài thực hành này. Ngoài ra, bạn đã khóa quyền truy cập để các kết nối RDP và ICMP <strong>chỉ có thể bắt nguồn từ địa chỉ IP public của bạn</strong>.</p>
 </div>
@@ -959,19 +959,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1733747256"></script>
-    <script src="/js/perfect-scrollbar.min.js?1733747256"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1733747256"></script>
-    <script src="/js/jquery.sticky.js?1733747256"></script>
-    <script src="/js/featherlight.min.js?1733747256"></script>
-    <script src="/js/highlight.pack.js?1733747256"></script>
+    <script src="/js/clipboard.min.js?1760626417"></script>
+    <script src="/js/perfect-scrollbar.min.js?1760626417"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1760626417"></script>
+    <script src="/js/jquery.sticky.js?1760626417"></script>
+    <script src="/js/featherlight.min.js?1760626417"></script>
+    <script src="/js/highlight.pack.js?1760626417"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1733747256"></script>
-    <script src="/js/learn.js?1733747256"></script>
-    <script src="/js/hugo-learn.js?1733747256"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1760626417"></script>
+    <script src="/js/learn.js?1760626417"></script>
+    <script src="/js/hugo-learn.js?1760626417"></script>
 
-    <link href="/mermaid/mermaid.css?1733747256" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1733747256"></script>
+    <link href="/mermaid/mermaid.css?1760626417" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1760626417"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
