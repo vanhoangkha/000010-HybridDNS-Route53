@@ -1,6 +1,6 @@
 ---
 title : "Set up Hybrid DNS with Route 53 Resolver"
-date : "`r Sys.Date()`"
+date : "2024-12-10"
 weight : 1
 chapter : false
 ---

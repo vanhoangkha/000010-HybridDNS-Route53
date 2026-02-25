@@ -1,6 +1,6 @@
 ---
-title : "Configuring Security Group"
-date : "`r Sys.Date()`"
+title : "Configure Security Group"
+date : "2024-12-10"
 weight : 3
 chapter : false
 pre : " <b> 2.3 </b> "
@@ -8,33 +8,35 @@ pre : " <b> 2.3 </b> "
 
 #### Configure Security Group
 
-1. Log in to **AWS Console** and access the **EC2 Management Console**:
-   - Open the AWS Console and search for "EC2" using the search box.
-   - Ensure that you have chosen the correct Region. Look in the upper left corner of the AWS Console and select the desired Region (In this case, we are selecting ap-southeast-1).
+1. Log in to **AWS Console** and access **EC2 Management console** through the search box and search for "EC2".
 
-   ![Security Group](/images/2.3-SecurityGroup/0001.png?width=90pc)
+   - Make sure you have selected the correct Region. Pay attention to the upper left corner of the **AWS Console** and select the correct Region you need (Here we are selecting us-east-2)
 
-2. Within the **EC2** interface:
-   - From the left-hand menu, click on **Security Groups**.
-   - Check the checkbox next to the security group with the description "**Enable RDP access from the Internet**".
-   - At the bottom of the screen, go to the Inbound tab.
-   - Click on **Edit inbound rules**.
+![Security Group](/images/2.3-SecurityGroup/1.png?width=90pc)
 
-   ![Security Group](/images/2.3-SecurityGroup/0002.png?width=90pc)
+2. In the **EC2** interface
 
-3. Edit the **Inbound** configuration:
-   - Click **Delete** next to the rule that specifies **Port Range** 3391 to remove the rule.
-   - Click **Delete** next to the rule that specifies **Port Range** 443 to remove the rule.
-   - For the RDP rule in the Source column, choose "**My IP**" from the list (for the lab, you can use **0.0.0.0/0**).
-   - For the ICMP rule in the Source column, choose "**My IP**" from the list (for the lab, you can use **0.0.0.0/0**).
-   - Click **Save rules**.
+   - In the left menu, select **Security Groups**.
+   - Check the checkbox of the security group with the description "**Enable RDP access from the Internet**"
+   - In the area at the bottom of the screen, select the Inbound tab.
+   - Select **Edit inbound rules**.
 
-   ![Security Group](/images/2.3-SecurityGroup/0003.png?width=90pc)
+![Security Group](/images/2.3-SecurityGroup/2.png?width=90pc)
 
-4. Finish configuring the security group.
+3. Configure and edit **Inbound**
 
-   ![Security Group](/images/2.3-SecurityGroup/0004.png?width=90pc)
+   - Click **Delete** next to the rule with **Port Range** content, 3391 to delete the rule
+   - Click **Delete** next to the rule with **Port Range** content, 443 to delete the rule
+   - For the RDP rule in the Source column, select "**My IP**" from the list (within the scope of the lab you can select **0.0.0.0/0**)
+   - For the ICMP rule in the Source column, select "**My IP**" from the list (within the scope of the lab you can select **0.0.0.0/0**)
+   - Select Save rules
+
+![Security Group](/images/2.3-SecurityGroup/3.png?width=90pc)
+
+4. Complete security group configuration.
+
+![Security Group](/images/2.3-SecurityGroup/4.png?width=90pc)
 
 {{% notice tip %}}
-When securing your application, it's important to ***open only the ports that your application requires***. In this step, you have **removed ports *3391* and *443*** since they are not needed for this exercise. Additionally, you've restricted access so that RDP and ICMP connections are **allowed only from *your public IP*** address.
+When securing your application, you need to ensure **only open the ports that your application needs**. In this step, **you have deleted ports *3391* and *443***, because you will not use those ports in this lab. Additionally, you have locked access so that RDP and ICMP connections **can only originate from your public IP address**.
 {{% /notice %}}

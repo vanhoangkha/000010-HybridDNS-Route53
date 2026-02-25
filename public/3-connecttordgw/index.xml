@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Connecting to RDGW on SET UP HYBRID DNS WITH ROUTE 53 RESOLVER</title>
-    <link>/3-connecttordgw/</link>
-    <description>Recent content in Connecting to RDGW on SET UP HYBRID DNS WITH ROUTE 53 RESOLVER</description>
+    <title>Connect to RDGW on SET UP HYBRID DNS WITH ROUTE 53 RESOLVER</title>
+    <link>//localhost:1313/3-connecttordgw/</link>
+    <description>Recent content in Connect to RDGW on SET UP HYBRID DNS WITH ROUTE 53 RESOLVER</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="/3-connecttordgw/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="//localhost:1313/3-connecttordgw/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

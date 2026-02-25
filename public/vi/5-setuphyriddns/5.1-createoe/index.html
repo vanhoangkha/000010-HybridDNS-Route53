@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="vi" class="js csstransforms3d">
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.133.0">
+    <meta name="generator" content="Hugo 0.148.1">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Tạo Route 53 Outbound Endpoint :: THIẾT LẬP HYBRID DNS VỚI ROUTE 53 RESOLVER</title>
 
     
-    <link href="/css/nucleus.css?1733747256" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1733747256" rel="stylesheet">
-    <link href="/css/hybrid.css?1733747256" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1733747256" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1733747256" rel="stylesheet">
-    <link href="/css/auto-complete.css?1733747256" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1733747256" rel="stylesheet">
-    <link href="/css/theme.css?1733747256" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1733747256" rel="stylesheet">
+    <link href="/css/nucleus.css?1760626417" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1760626417" rel="stylesheet">
+    <link href="/css/hybrid.css?1760626417" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1760626417" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1760626417" rel="stylesheet">
+    <link href="/css/auto-complete.css?1760626417" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1760626417" rel="stylesheet">
+    <link href="/css/theme.css?1760626417" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1760626417" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1733747256" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1760626417" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1733747256"></script>
+    <script src="/js/jquery-3.3.1.min.js?1760626417"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1733747256"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1733747256"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1760626417"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1760626417"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/\/vi";
+        var baseurl = "\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1733747256"></script>
+<script type="text/javascript" src="/js/search.js?1760626417"></script>
 
     
   </div>
@@ -489,7 +489,7 @@
                   
                     
                     
-                      <option id="en" value="/5-setuphyriddns/5.1-createoe/">English</option>
+                      <option id="en" value="//localhost:1313/5-setuphyriddns/5.1-createoe/">English</option>
                     
                   
               
@@ -503,7 +503,7 @@
                   
                     
                     
-                      <option id="vi" value="/vi/5-setuphyriddns/5.1-createoe/" selected>Tiếng Việt</option>
+                      <option id="vi" value="//localhost:1313/vi/5-setuphyriddns/5.1-createoe/" selected>Tiếng Việt</option>
                     
                   
               
@@ -638,43 +638,45 @@
 
 	<h4 id="tạo-route-53-outbound-endpoint">Tạo Route 53 Outbound Endpoint</h4>
 <p><strong>Bước 1:</strong> Đầu tiên, chúng ta sẽ tạo một <strong>Outbound Endpoint</strong> trong Route 53 để cho phép <strong>Route 53 Resolver</strong> chuyển tiếp các truy vấn <strong>DNS</strong> đối với tên miền được đặt trên hệ thống ngoài của Route 53. Khi bạn tạo một <strong>Outbound Endpoint</strong> trong Route 53, AWS sẽ tự động tạo một <strong>Elastic Network Interface</strong> (ENI) trong mỗi <strong>Availability Zone</strong> (AZ) mà bạn chỉ định.</p>
-<p><img alt="RDGW" src="/images/2-Pre/0006.png?featherlight=false&width=45pc"></p>
+<p><img src="/images/2-Pre/0006.png?featherlight=false&amp;width=45pc" alt="RDGW"></p>
 <p><strong>Bước 2:</strong> Truy cập giao diện Route 53 thông qua khung tìm kiếm và chọn mục Route 53.</p>
 <ul>
 <li>Mở rộng menu bên trái, chọn <strong>Outbound Endpoints</strong> và nhấn vào <strong>Create Outbound Endpoint</strong>.</li>
 </ul>
-<p><img alt="RDGW" src="/images/5.1-CreateOE/0001.png?featherlight=false&width=90pc"></p>
+<p><img src="/images/5.1-CreateOE/1.png?featherlight=false&amp;width=90pc" alt="RDGW">
+<img src="/images/5.1-CreateOE/2.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
 <p><strong>Bước 3:</strong> Tại trang <strong>Create Outbound Endpoint</strong>, điền các thông tin sau:</p>
 <ul>
-<li><strong>Endpoint name</strong>: <code>R53-OutboundEndpoint</code></li>
+<li><strong>Endpoint name</strong>: <strong><code>R53-OutboundEndpoint</code></strong></li>
 <li><strong>VPC in the Region</strong>: HybridDNS-VPCStack- (Đây là VPC đã được tạo bởi CloudFormation trong phần trước)</li>
 <li><strong>Security group for this endpoint</strong>: d-###….#_controllers (Đây là security group được tạo bởi CloudFormation để bảo vệ kết nối tới <strong>AWS Managed Microsoft Active Directory</strong>)</li>
 </ul>
-<p><img alt="RDGW" src="/images/5.1-CreateOE/0002.png?width=92pc"></p>
+<p><img src="/images/5.1-CreateOE/3.png?width=92pc" alt="RDGW"></p>
 <p><strong>Bước 4:</strong> Tiến hành cấu hình <strong>IP addresses</strong></p>
 <ul>
 <li><strong>IP address #1:</strong>
 <ul>
-<li>Ở <strong>Availability Zone</strong>, chọn “ap-southeast-1a”</li>
+<li>Ở <strong>Availability Zone</strong>, chọn “us-east-2a”</li>
 <li>Ở <strong>Subnet</strong>, chọn “Private subnet 1A”</li>
 <li>Ở <strong>IP address</strong>, chọn “Use an IP address that is selected automatically”</li>
 </ul>
 </li>
 <li><strong>IP address #2:</strong>
 <ul>
-<li>Ở <strong>Availability Zone</strong>, chọn “ap-southeast-1c”</li>
+<li>Ở <strong>Availability Zone</strong>, chọn “us-east-2b”</li>
 <li>Ở <strong>Subnet</strong>, chọn “Private subnet 2A”</li>
 <li>Ở <strong>IP address</strong>, chọn “Use an IP address that is selected automatically”</li>
 </ul>
 </li>
 </ul>
-<p><img alt="RDGW" src="/images/5.1-CreateOE/0003.png?width=92pc"></p>
-<p><strong>Bước 5:</strong> Cuối cùng, nhấp vào <strong>Create Outbound Endpoint</strong>.</p>
-<p><img alt="RDGW" src="/images/5.1-CreateOE/0004.png?featherlight=false&width=90pc"></p>
+<p><img src="/images/5.1-CreateOE/4.png?width=92pc" alt="RDGW">
+<img src="/images/5.1-CreateOE/5.png?featherlight=false&amp;width=90pc" alt="RDGW">
+<strong>Bước 5:</strong> Cuối cùng, nhấp vào <strong>Create Outbound Endpoint</strong>.</p>
+<p><img src="/images/5.1-CreateOE/6.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
 <p><strong>Bước 6:</strong> Sau khoảng 5 phút, <strong>Outbound Endpoint</strong> sẽ được cấu hình thành công trong VPC của bạn.</p>
-<p><img alt="RDGW" src="/images/5.1-CreateOE/0005.png?featherlight=false&width=90pc"></p>
+<p><img src="/images/5.1-CreateOE/7.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
 <p><strong>Bước 7:</strong> Khi các <strong>Outbound Endpoint</strong> đã được tạo, nhấp vào mục <strong>Outbound Endpoint</strong> để xem thông tin chi tiết. Bạn sẽ thấy danh sách các địa chỉ IP đã được gán cho các <strong>Outbound Endpoint</strong>. AWS sẽ đặt một <strong>Elastic Network Interface</strong> (ENI) trong subnet của bạn và gán địa chỉ IP này cho ENI.</p>
-<p><img alt="RDGW" src="/images/5.1-CreateOE/0006.png?featherlight=false&width=90pc"></p>
+<p><img src="/images/5.1-CreateOE/7.png?featherlight=false&amp;width=90pc" alt="RDGW"></p>
 
 
 
@@ -952,19 +954,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1733747256"></script>
-    <script src="/js/perfect-scrollbar.min.js?1733747256"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1733747256"></script>
-    <script src="/js/jquery.sticky.js?1733747256"></script>
-    <script src="/js/featherlight.min.js?1733747256"></script>
-    <script src="/js/highlight.pack.js?1733747256"></script>
+    <script src="/js/clipboard.min.js?1760626417"></script>
+    <script src="/js/perfect-scrollbar.min.js?1760626417"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1760626417"></script>
+    <script src="/js/jquery.sticky.js?1760626417"></script>
+    <script src="/js/featherlight.min.js?1760626417"></script>
+    <script src="/js/highlight.pack.js?1760626417"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1733747256"></script>
-    <script src="/js/learn.js?1733747256"></script>
-    <script src="/js/hugo-learn.js?1733747256"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1760626417"></script>
+    <script src="/js/learn.js?1760626417"></script>
+    <script src="/js/hugo-learn.js?1760626417"></script>
 
-    <link href="/mermaid/mermaid.css?1733747256" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1733747256"></script>
+    <link href="/mermaid/mermaid.css?1760626417" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1760626417"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="vi" class="js csstransforms3d">
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.133.0">
+    <meta name="generator" content="Hugo 0.148.1">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Khởi tạo CloudFormation Template :: THIẾT LẬP HYBRID DNS VỚI ROUTE 53 RESOLVER</title>
 
     
-    <link href="/css/nucleus.css?1733747256" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1733747256" rel="stylesheet">
-    <link href="/css/hybrid.css?1733747256" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1733747256" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1733747256" rel="stylesheet">
-    <link href="/css/auto-complete.css?1733747256" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1733747256" rel="stylesheet">
-    <link href="/css/theme.css?1733747256" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1733747256" rel="stylesheet">
+    <link href="/css/nucleus.css?1760626417" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1760626417" rel="stylesheet">
+    <link href="/css/hybrid.css?1760626417" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1760626417" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1760626417" rel="stylesheet">
+    <link href="/css/auto-complete.css?1760626417" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1760626417" rel="stylesheet">
+    <link href="/css/theme.css?1760626417" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1760626417" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1733747256" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1760626417" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1733747256"></script>
+    <script src="/js/jquery-3.3.1.min.js?1760626417"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1733747256"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1733747256"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1760626417"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1760626417"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/\/vi";
+        var baseurl = "\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1733747256"></script>
+<script type="text/javascript" src="/js/search.js?1760626417"></script>
 
     
   </div>
@@ -489,7 +489,7 @@
                   
                     
                     
-                      <option id="en" value="/2-prerequiste/2.2-launchcloudformation/">English</option>
+                      <option id="en" value="//localhost:1313/2-prerequiste/2.2-launchcloudformation/">English</option>
                     
                   
               
@@ -503,7 +503,7 @@
                   
                     
                     
-                      <option id="vi" value="/vi/2-prerequiste/2.2-launchcloudformation/" selected>Tiếng Việt</option>
+                      <option id="vi" value="//localhost:1313/vi/2-prerequiste/2.2-launchcloudformation/" selected>Tiếng Việt</option>
                     
                   
               
@@ -640,18 +640,19 @@
 
 	<h4 id="khởi-tạo-cloudformation-template">Khởi tạo CloudFormation Template</h4>
 <p>Trong bước này, bạn sẽ xây dựng cơ sở hạ tầng mạng trong AWS. Trong phần này, bạn sẽ tận dụng template từ <strong>AWS Quick Start</strong> để xây dựng một hạ tầng mạng có tính sẵn sàng cao (HA) và bảo mật bằng <strong>AWS CloudFormation</strong>. Dưới đây là kiến trúc sẽ được xây dựng từ template.</p>
-<p><img alt="Launch CloudFormation" src="/images/2-Pre/0002.png?width=45pc"></p>
+<p><img src="/images/2-Pre/0002.png?width=45pc" alt="Launch CloudFormation"></p>
 <h2 id="bước-1-đăng-nhập-vào-aws-management-console">Bước 1: Đăng nhập vào AWS Management Console</h2>
 <ul>
 <li>Tìm và chọn <strong>CloudFormation</strong> trong AWS Management Console.</li>
 </ul>
-<p><img alt="Launch CloudFormation" src="/images/2.2-LaunchCloudFormation/0001.png?width=90pc"></p>
+<p><img src="/images/2.2-LaunchCloudFormation/1.png?width=90pc" alt="Launch CloudFormation"></p>
 <h2 id="bước-2-tạo-stack-cloudformation">Bước 2: Tạo stack CloudFormation</h2>
 <ol>
-<li>Trong giao diện <strong>CloudFormation</strong>, chọn <strong>Create stack</strong>.</li>
-</ol>
-<p><img alt="Launch CloudFormation" src="/images/2.2-LaunchCloudFormation/0002.png?width=90pc"></p>
-<ol start="2">
+<li>
+<p>Trong giao diện <strong>CloudFormation</strong>, chọn <strong>Create stack</strong>.
+<img src="/images/2.2-LaunchCloudFormation/1.9.png?width=90pc" alt="Launch CloudFormation">
+<img src="/images/2.2-LaunchCloudFormation/2.png?width=90pc" alt="Launch CloudFormation"></p>
+</li>
 <li>
 <p>Trong giao diện <strong>Create stack</strong>:</p>
 <ul>
@@ -662,17 +663,17 @@
 </ul>
 </li>
 </ol>
-<p><img alt="Launch CloudFormation" src="/images/2.2-LaunchCloudFormation/0003.png?width=90pc"></p>
+<p><img src="/images/2.2-LaunchCloudFormation/3.png?width=90pc" alt="Launch CloudFormation"></p>
 <ol start="3">
 <li>
 <p>Thực hiện cấu hình stack:</p>
 <ul>
-<li>Ở <strong>Stack name</strong>, nhập <strong>HybridDNS</strong>.</li>
-<li>Ở <strong>Availability Zones</strong>, chọn <strong>ap-northeast-1a và ap-northeast-1</strong>.</li>
+<li>Ở <strong>Stack name</strong>, nhập <strong><code>HybridDNS</code></strong>.</li>
+<li>Ở <strong>Availability Zones</strong>, chọn <strong>us-east-2a và us-east-2b</strong>.</li>
 </ul>
 </li>
 </ol>
-<p><img alt="Launch CloudFormation" src="/images/2.2-LaunchCloudFormation/0004.png?width=90pc"></p>
+<p><img src="/images/2.2-LaunchCloudFormation/4.png?width=90pc" alt="Launch CloudFormation"></p>
 <ol start="4">
 <li>
 <p>Thực hiện cấu hình Network:</p>
@@ -682,7 +683,7 @@
 </ul>
 </li>
 </ol>
-<p><img alt="Launch CloudFormation" src="/images/2.2-LaunchCloudFormation/0005.png?width=70pc"></p>
+<p><img src="/images/2.2-LaunchCloudFormation/5.png?width=70pc" alt="Launch CloudFormation"></p>
 
 <div class="notices warning" ><p>Thiết lập này cho phép bất kỳ địa chỉ IP nào cũng có thể truy cập vào cổng RDP của EC2 instance sắp được tạo. Đây không phải là cấu hình an toàn và không nên được sử dụng trong môi trường production. Chúng ta sẽ điều chỉnh quyền truy cập sau khi quá trình triển khai template CloudFormation hoàn tất.</p>
 </div>
@@ -691,7 +692,7 @@
 <li>
 <p>Trong bước <strong>Amazon EC2 configuration</strong>:</p>
 <ul>
-<li>Trong <strong>Key Pair Name</strong>, chọn Key Pair đã tạo trước đó (<strong>hybrid-DNS</strong>).</li>
+<li>Trong <strong>Key Pair Name</strong>, chọn Key Pair đã tạo trước đó   <strong><code>hybrid-DNS</code></strong> .</li>
 <li>Ở <strong>Remote Desktop Gateway Instance Type</strong>, giữ giá trị mặc định (t2.large).</li>
 <li>Ở <strong>Number of RDGW Hosts</strong>, giữ giá trị mặc định (1).</li>
 <li>Ở <strong>Admin User Name</strong>, giữ giá trị mặc định (StackAdmin).</li>
@@ -699,7 +700,7 @@
 </ul>
 </li>
 </ol>
-<p><img alt="Launch CloudFormation" src="/images/2.2-LaunchCloudFormation/0006.png?width=70pc"></p>
+<p><img src="/images/2.2-LaunchCloudFormation/6.png?width=70pc" alt="Launch CloudFormation"></p>
 
 <div class="notices tip" ><p>Diagram trên hiển thị hai RDGW host (một host mỗi Availability Zone). Trong mục đích thực hành, chúng ta bắt đầu với một RDGW host để giảm thời gian khởi tạo của CloudFormation. Tuy nhiên, như trong diagram, bạn có thể thấy RDGW host được triển khai trong một Auto Scaling Group. Sau khi quá trình triển khai CloudFormation stack hoàn tất, bạn có thể thử cấu hình Auto Scaling group. Auto Scaling group là một dịch vụ quan trọng cung cấp tính sẵn sàng và mở rộng cho ứng dụng của bạn.</p>
 </div>
@@ -707,23 +708,28 @@
 <ol start="6">
 <li>Ở các lựa chọn khác, giữ giá trị mặc định và chọn <strong>Next</strong>.</li>
 </ol>
-<p><img alt="Launch CloudFormation" src="/images/2.2-LaunchCloudFormation/0007.png?width=91pc"></p>
+<p><img src="/images/2.2-LaunchCloudFormation/7.png?width=91pc" alt="Launch CloudFormation"></p>
 <ol start="7">
 <li>Chọn <strong>Next</strong>.</li>
 </ol>
-<p><img alt="Launch CloudFormation" src="/images/2.2-LaunchCloudFormation/0008.png?width=90pc"></p>
+<p><img src="/images/2.2-LaunchCloudFormation/8.png?width=90pc" alt="Launch CloudFormation">
+<img src="/images/2.2-LaunchCloudFormation/9.png?width=90pc" alt="Launch CloudFormation"></p>
 <ol start="8">
 <li>Kiểm tra lại thiết lập của stack trong màn hình Review HybridDNS. Chọn vào hai ô checkbox và chọn <strong>Create Stack</strong>.</li>
 </ol>
-<p><img alt="Launch CloudFormation" src="/images/2.2-LaunchCloudFormation/0009.png?width=90pc"></p>
+<p><img src="/images/2.2-LaunchCloudFormation/10.png?width=90pc" alt="Launch CloudFormation"></p>
 <ol start="9">
-<li>Template mất khoảng 15 phút để hoàn thành. Trong thời gian này, chúng ta sẽ xem xét những thành phần mà template CloudFormation sẽ tạo. Sau khi quá trình khởi tạo stack hoàn tất, trạng thái của stack sẽ chuyển thành <strong>CREATE_COMPLETE</strong>.</li>
+<li>
+<p>Cuối cùng chọn  <strong>Submit</strong> của stack vừa được tạo.
+<img src="/images/2.2-LaunchCloudFormation/11.png?width=91pc" alt="Launch CloudFormation"></p>
+</li>
+<li>
+<p>Template mất khoảng 15 phút để hoàn thành. Trong thời gian này, chúng ta sẽ xem xét những thành phần mà template CloudFormation sẽ tạo. Sau khi quá trình khởi tạo stack hoàn tất, trạng thái của stack sẽ chuyển thành <strong>CREATE_COMPLETE</strong>.</p>
+</li>
 </ol>
-<p><img alt="Launch CloudFormation" src="/images/2.2-LaunchCloudFormation/00010.png?width=90pc"></p>
-<ol start="10">
-<li>Xem phần <strong>Output</strong> của stack vừa được tạo.</li>
-</ol>
-<p><img alt="Launch CloudFormation" src="/images/2.2-LaunchCloudFormation/00011.png?width=91pc"></p>
+<p><img src="/images/2.2-LaunchCloudFormation/12.png?width=91pc" alt="Launch CloudFormation">
+11. Xem phần <strong>Output</strong> của stack vừa được tạo.</p>
+<p><img src="/images/2.2-LaunchCloudFormation/13.png?width=91pc" alt="Launch CloudFormation"></p>
 
 
 
@@ -1004,19 +1010,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1733747256"></script>
-    <script src="/js/perfect-scrollbar.min.js?1733747256"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1733747256"></script>
-    <script src="/js/jquery.sticky.js?1733747256"></script>
-    <script src="/js/featherlight.min.js?1733747256"></script>
-    <script src="/js/highlight.pack.js?1733747256"></script>
+    <script src="/js/clipboard.min.js?1760626417"></script>
+    <script src="/js/perfect-scrollbar.min.js?1760626417"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1760626417"></script>
+    <script src="/js/jquery.sticky.js?1760626417"></script>
+    <script src="/js/featherlight.min.js?1760626417"></script>
+    <script src="/js/highlight.pack.js?1760626417"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1733747256"></script>
-    <script src="/js/learn.js?1733747256"></script>
-    <script src="/js/hugo-learn.js?1733747256"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1760626417"></script>
+    <script src="/js/learn.js?1760626417"></script>
+    <script src="/js/hugo-learn.js?1760626417"></script>
 
-    <link href="/mermaid/mermaid.css?1733747256" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1733747256"></script>
+    <link href="/mermaid/mermaid.css?1760626417" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1760626417"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

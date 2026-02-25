@@ -2,10 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Thiết lập Hybrid DNS với Route 53 Resolver on THIẾT LẬP HYBRID DNS VỚI ROUTE 53 RESOLVER</title>
-    <link>/vi/</link>
+    <link>//localhost:1313/vi/</link>
     <description>Recent content in Thiết lập Hybrid DNS với Route 53 Resolver on THIẾT LẬP HYBRID DNS VỚI ROUTE 53 RESOLVER</description>
     <generator>Hugo</generator>
     <language>vi</language>
-    <atom:link href="/vi/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="//localhost:1313/vi/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

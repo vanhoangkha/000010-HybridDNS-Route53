@@ -1,6 +1,6 @@
 ---
 title : "Thử nghiệm kết quả"
-date :  "`r Sys.Date()`" 
+date : "2024-12-10" 
 weight : 4
 chapter : false
 pre : " <b> 5.4 </b> "
@@ -16,7 +16,7 @@ pre : " <b> 5.4 </b> "
 nslookup onprem.example.com
 ```
 
-![Results](/images/5.4-Results/0001.png?featherlight=false&width=90pc)
+![Results](/images/5.4-Results/1.png?featherlight=false&width=90pc)
 
 2. Mở PowerShell trên **Windows** và thực thi lệnh: 
 
@@ -24,4 +24,4 @@ nslookup onprem.example.com
 Resolve-DnsName onprem.example.com
 ```
 
-![Results](/images/5.4-Results/0002.png?featherlight=false&width=90pc)
+![Results](/images/5.4-Results/2.png?featherlight=false&width=90pc)
