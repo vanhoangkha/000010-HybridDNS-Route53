@@ -1,4 +1,4 @@
-# 🌍 Hybrid DNS with Route 53
+# Hybrid DNS with Route 53
 
 Configure hybrid DNS resolution between on-premises and AWS using Route 53.
 
@@ -8,7 +8,7 @@ This is a hands-on workshop from the **AWS First Cloud Journey** series, designe
 
 ## Workshop
 
-📖 **[Start the workshop](https://vanhoangkha.github.io/000010-HybridDNS-Route53/)**
+**[Start the workshop](https://vanhoangkha.github.io/000010-HybridDNS-Route53/)**
 
 ## Prerequisites
 
